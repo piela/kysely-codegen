@@ -314,9 +314,9 @@ export class TypeScriptSerializer implements Serializer {
     if (node.properties.length > 0) {
       data += '\n';
 
-      const sortedProperties = [...node.properties].sort((a, b) =>
+      const sortedProperties = node.properties  /* [...node.properties].sort((a, b) =>
         a.key.localeCompare(b.key),
-      );
+      );*/
 
       for (const property of sortedProperties) {
         data += '  ';
